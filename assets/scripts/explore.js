@@ -30,5 +30,10 @@ function init() {
         }
 
         synth.speak(utterThis);
+        document.querySelector('img').src = 'assets/images/smiling-open.png';
+        
+        utterThis.addEventListener('end', () => {
+            document.querySelector('img').src = 'assets/images/smiling.png';
+        });
     });
 }
